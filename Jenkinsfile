@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("Master build") {
+    /*    stage("Master build") {
             when {
                 branch "master"
             }
@@ -17,6 +17,17 @@ pipeline {
             }
             steps {
                 echo "Building dev branch"
+            }
+        }*/
+
+        stage("Buildtag") {
+            when {
+                //tag "release-*"
+                buildingTag()
+            }
+
+            steps {
+                echo "building release branch"
             }
         }
     }

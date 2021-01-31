@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage("Run stages in parallel") {
-            //failFast=true
+            failFast true
             parallel {
             stage("stage1") {
                 steps {
@@ -20,7 +20,7 @@ pipeline {
                 steps {
                 echo "stage3"
                 sleep 5
-                //error "stage3 errored out"
+                error "stage3 errored out"
                 }
             }
     /*    stage("Master build") {

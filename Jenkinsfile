@@ -23,7 +23,8 @@ pipeline {
         stage("Buildtag") {
             when {
                 //tag "release-*"
-                buildingTag()
+                //buildingTag()
+                tag "2.0"
             }
 
             steps {

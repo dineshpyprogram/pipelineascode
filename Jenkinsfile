@@ -20,7 +20,7 @@ pipeline {
                 steps {
                 echo "stage3"
                 sleep 5
-                error "stage3 errored out"
+                //error "stage3 errored out"
                 }
             }
     /*    stage("Master build") {

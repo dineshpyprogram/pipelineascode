@@ -20,10 +20,11 @@ pipeline {
             }
         }*/
 
-        stage("Buildtag") {
+        stage("Build") {
             when {
                 //tag "release-*"
                 //buildingTag()
+                changeRequest()
             }
 
             steps {

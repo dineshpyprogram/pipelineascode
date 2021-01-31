@@ -31,5 +31,14 @@ pipeline {
                 echo "building release branch"
             }
         }
+
+        stage("changerequest") {
+            when {
+                changeRequest()
+            }
+            steps {
+                echo "building as there is a PR"
+            }
+        }
     }
 }

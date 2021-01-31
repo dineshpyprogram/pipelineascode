@@ -30,5 +30,5 @@ pipeline {
                 echo "building release branch"
             }
         }
-    }
+    
 }

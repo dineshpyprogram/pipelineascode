@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    /*stages {
-        stage("Master build") {
+    stages {
+    /*    stage("Master build") {
             when {
                 branch "master"
             }
@@ -30,5 +30,5 @@ pipeline {
                 echo "building release branch"
             }
         }
-    
+    }
 }

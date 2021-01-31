@@ -24,7 +24,6 @@ pipeline {
             when {
                 //tag "release-*"
                 //buildingTag()
-                
             }
 
             steps {

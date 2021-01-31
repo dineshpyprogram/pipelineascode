@@ -19,5 +19,16 @@ pipeline {
                 echo "Building dev branch"
             }
         }
+
+        stage("Buildtag") {
+            when {
+                //tag "release-*"
+                buildingTag()
+            }
+
+            steps {
+                echo "building release branch"
+            }
+        }
     }
 }

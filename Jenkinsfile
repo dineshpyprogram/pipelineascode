@@ -4,17 +4,23 @@ pipeline {
         stage("Run stages in parallel") {
             failFast=true
             stage("stage1") {
-                echo "stage1"
-                sleep 10
+                steps {
+                    echo "stage1"
+                    sleep 10
+                }
             }
             stage("stage2") {
-                echo "stage2"
-                sleep 5
+                steps {
+                    echo "stage2"
+                    sleep 5
+                }
             }
             stage("stage3") {
+                steps {
                 echo "stage3"
                 sleep 5
                 error "stage3 errored out"
+                }
             }
     /*    stage("Master build") {
             when {

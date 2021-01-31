@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage("Run stages in parallel") {
             failFast=true
+            parallel {
             stage("stage1") {
                 steps {
                     echo "stage1"
@@ -61,6 +62,7 @@ pipeline {
                 echo "building as there is a PR"
             }
         }*/
+    }
     }
     }
 }
